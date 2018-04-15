@@ -16,7 +16,7 @@ int main(int argc,char**argv){
     if(argc != 4 && argc !=5){
         if(help == argv[1]){
             std::cout<<"File Encryption && Decryption using RC4"<<std::endl;
-            std::cout<<"./program -f [fileName] (-e OR -d) (-de OR -k [key])"<<std::endl;
+            std::cout<<"./program -f [fileName] (-de OR -k [key])"<<std::endl;
             std::cout<<"\t\t"<<"-f [FileName]"<<std::endl;
             std::cout<<"\t\t"<<"-de | use default seed"<<std::endl;
             std::cout<<"\t\t"<<"-k [key]"<<std::endl;
