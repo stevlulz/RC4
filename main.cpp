@@ -20,6 +20,8 @@ int main(int argc,char**argv){
             std::cout<<"\t\t"<<"-f [FileName]"<<std::endl;
             std::cout<<"\t\t"<<"-de | use default seed"<<std::endl;
             std::cout<<"\t\t"<<"-k [key]"<<std::endl;
+            exit(-1);
+
         }
         else{
             std::cout<<"you must enter a valid arguments"<<std::endl;
@@ -54,7 +56,6 @@ int main(int argc,char**argv){
 
     inFile.seekg(0, std::ios::end); // set the pointer to the end
     size = inFile.tellg() ; // get the length of the file
-    std::cout << "Size of file: " << size;
     inFile.seekg(0, std::ios::beg); // set the pointer to the beginning
 
     oData = new char[ size+1 ]; //  for the '\0'
@@ -67,7 +68,7 @@ int main(int argc,char**argv){
             oData[i] = rc4.encrypt_decrypt((unsigned char)oData[i]);
 
     }
-
+    std::cout<<"result putted in res.txt of current directory"<<std::endl;
 
     std::ofstream myfile;
     myfile.open (resultFile.c_str());
