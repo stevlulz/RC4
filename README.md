@@ -36,7 +36,4 @@ C++ compiler (g++)
 
 
 
-## Acknowledgments
-
-* Hat tip to my teacher Mohamed Slimane
 
